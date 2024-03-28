@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "7aa5f7c1-dc95-4cfb-a047-b2e25635ad9a",
+		"name": "Notes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33449975"
+	},
+	"item": [
+		{
+			"name": "DeleteMultipleNote",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmQxOGRhN2UyNzJjMGM5MWMzNTM0MiIsImlhdCI6MTcxMTA4NTc4Nn0.EkiSyx6FD8QpRVjV2NzlniCQboUbij2ISRInhBpbHH0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"ids\"  :[\"65fd19d9d8ef158acd0be8e6\"]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/note/delete-multiple",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"note",
+						"delete-multiple"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostNote",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmQxOGRhN2UyNzJjMGM5MWMzNTM0MiIsImlhdCI6MTcxMTA4NTc4Nn0.EkiSyx6FD8QpRVjV2NzlniCQboUbij2ISRInhBpbHH0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n    {\n        \"note\":\"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima veritatis vel reiciendis quod, tempora, officiis nam eos nobis culpa exercitationem nostrum iure odio similique alias incidunt consequuntur blanditiis eveniet. Natus consequuntur quisquam minima eius, perferendis maiores eum mollitia nemo reprehenderit.\",\n        \"title\":\"This is a title-5\"\n    }\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/note/data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"note",
+						"data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchNote",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmQxOGRhN2UyNzJjMGM5MWMzNTM0MiIsImlhdCI6MTcxMTA4NTc4Nn0.EkiSyx6FD8QpRVjV2NzlniCQboUbij2ISRInhBpbHH0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/note/search/65fd19d9d8ef158acd0be8e6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"note",
+						"search",
+						"65fd19d9d8ef158acd0be8e6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LastThreeUpdatedNote",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmQxOGRhN2UyNzJjMGM5MWMzNTM0MiIsImlhdCI6MTcxMTA4NTc4Nn0.EkiSyx6FD8QpRVjV2NzlniCQboUbij2ISRInhBpbHH0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/note/last-updated",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"note",
+						"last-updated"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ViewSoftDeleteNote",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmQxOGRhN2UyNzJjMGM5MWMzNTM0MiIsImlhdCI6MTcxMTA4NTc4Nn0.EkiSyx6FD8QpRVjV2NzlniCQboUbij2ISRInhBpbHH0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/note/get-soft-delete-true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"note",
+						"get-soft-delete-true"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteSingleNote",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmQxOGYwN2UyNzJjMGM5MWMzNTM0NSIsImlhdCI6MTcxMTA4NTgwOH0.DR6BTSqA1UqQP_imGxj_FGFmpfmjiNsA5KaU6WDHcTw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/note/delete/65fd1dad00b0357a455df977",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"note",
+						"delete",
+						"65fd1dad00b0357a455df977"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SoftDeleteNote",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmQxOGRhN2UyNzJjMGM5MWMzNTM0MiIsImlhdCI6MTcxMTA4NTc4Nn0.EkiSyx6FD8QpRVjV2NzlniCQboUbij2ISRInhBpbHH0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ids\":[\"65fd19d9d8ef158acd0be8e6\",\"65fd19e9d8ef158acd0be8e8\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/note/get-soft-delete-all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"note",
+						"get-soft-delete-all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateNote",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmQxOGRhN2UyNzJjMGM5MWMzNTM0MiIsImlhdCI6MTcxMTA4NTc4Nn0.EkiSyx6FD8QpRVjV2NzlniCQboUbij2ISRInhBpbHH0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\":\"This is note 1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/note/update/65fd19d9d8ef158acd0be8e6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"note",
+						"update",
+						"65fd19d9d8ef158acd0be8e6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetNotes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ZmQxOGYwN2UyNzJjMGM5MWMzNTM0NSIsImlhdCI6MTcxMTA4NTgwOH0.DR6BTSqA1UqQP_imGxj_FGFmpfmjiNsA5KaU6WDHcTw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:3001/note",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"note"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
